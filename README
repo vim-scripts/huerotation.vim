@@ -1,0 +1,15 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=2283
+
+Hue is one of component of HSV color model. 
+You can rotate hue of current colorscheme.
+
+This plugin requires vim7.2 for Float feature.
+
+Usage:
+  :call RotateHue(60)
+
+Reference:
+  EasyRGB - Color mathematics and conversion formulas.:
+    http://www.easyrgb.com/math.php
+  Wikipedia - HSL and HSV
+    http://en.wikipedia.org/wiki/HSL_and_HSV
