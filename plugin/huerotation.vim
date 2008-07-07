@@ -4,7 +4,7 @@
 " License: This file is placed in the public domain.
 "
 " Description:
-"   Hue is one of component of HSV color model.  you can rotate hue of current
+"   Hue is one of component of HSV color model.  You can rotate hue of current
 "   colorscheme.
 "
 " Usage:
@@ -26,9 +26,15 @@ function s:lib.rotate_hue(degree)
   for [name, fg, bg] in self.dump_highlight()
     if fg == ''
       let fg = synIDattr(hlID('Normal'), 'fg#')
+      if fg == ''
+        let fg = '#000000'
+      endif
     endif
     if bg == ''
       let bg = synIDattr(hlID('Normal'), 'bg#')
+      if bg == ''
+        let bg = '#FFFFFF'
+      endif
     endif
     let fg = self.rotate_hue_hex(fg, a:degree)
     let bg = self.rotate_hue_hex(bg, a:degree)
